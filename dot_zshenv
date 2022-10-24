@@ -1,4 +1,5 @@
 export LANG='en_US.UTF-8'
+export EDITOR='vim'
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -7,4 +8,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-source '/etc/profile.d/apps-bin-path.sh'
+# Snap (workaround for https://qiita.com/sameyasu/items/072882ee92bca54906d8)
+if [ -f '/etc/profile.d/apps-bin-path.sh' ]; then
+  source '/etc/profile.d/apps-bin-path.sh'
+fi

@@ -29,14 +29,18 @@ setopt AUTO_PUSHD
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 
+bindkey -e
+
 path=(
     "$HOME/bin"
     "$HOME/.local/bin"
     "$path[@]"
 )
 
-eval "$(starship init zsh)"
+# Use this prompt until starship is loaded
+PS1=$'\n'$'\n''❯ '
 
-zinit wait lucid null for \
-    atinit'source "$ZDOTDIR/.zshrc.lazy"' \
-    @'zdharma-continuum/null'
+# Lazy load .zshrc.lazy
+zinit ice wait lucid null \
+    atinit'source "$ZDOTDIR/.zshrc.lazy"'
+zinit light 'zdharma-continuum/null'
