@@ -21,7 +21,9 @@ autoload -Uz _zinit
 
 ### End of Zinit's installer chunk
 
+# 履歴をメモリ上に12000件まで保存
 HISTSIZE=12000
+# 履歴をファイル上に10000件まで保存
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
@@ -34,9 +36,6 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 # 履歴に保存するとき、余計な空白を削除
 setopt HIST_REDUCE_BLANKS
-
-# --option=abc みたいなやつでも補完
-setopt MAGIC_EQUAL_SUBST
 
 # 日本語ファイル名を正しく表示
 setopt PRINT_EIGHT_BIT
@@ -57,7 +56,7 @@ zinit ice lucid \
     atload'eval "$(starship init zsh)"'
 zinit light starship/starship
 
-# Terminal module from prezto
+# 端末のウィンドウやタブのタイトル設定
 zstyle ':prezto:module:terminal' auto-title 'yes'
 zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
 zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
