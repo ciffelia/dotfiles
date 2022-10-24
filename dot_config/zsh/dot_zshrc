@@ -40,7 +40,7 @@ path=(
 # Use this prompt until starship is loaded
 PS1=$'\n'$'\n''❯ '
 
-# Lazy load .zshrc.lazy
+# Lazy load .zshrc.lazy.zsh
 zinit ice wait lucid null \
-    atinit'source "$ZDOTDIR/.zshrc.lazy"'
+    atinit'source "$ZDOTDIR/.zshrc.lazy.zsh"'
 zinit light 'zdharma-continuum/null'
