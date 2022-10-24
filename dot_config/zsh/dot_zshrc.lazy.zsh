@@ -10,6 +10,13 @@ alias ls='lsd'
 alias la='lsd -a'
 alias ll='lsd -la'
 
+# pyenv
+if [ -d "$HOME/.pyenv" ]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
+
 # Plugins
 zinit lucid blockf light-mode for \
     @'zsh-users/zsh-autosuggestions' \
