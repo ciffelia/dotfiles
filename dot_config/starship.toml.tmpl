@@ -1,0 +1,17 @@
+{{- $isWsl := contains "WSL" .chezmoi.kernel.osrelease -}}
+
+format = "${custom.wsl}$all"
+
+[git_status]
+{{ if $isWsl -}}
+windows_starship = "/mnt/c/Users/prince/scoop/shims/starship.exe"
+{{- end }}
+
+[custom.wsl]
+command = "echo 'WSL '"
+style = "bold yellow"
+{{ if $isWsl -}}
+when = true
+{{- else -}}
+when = false
+{{- end }}
