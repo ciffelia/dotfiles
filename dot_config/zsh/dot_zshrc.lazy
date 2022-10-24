@@ -1,0 +1,7 @@
+zinit wait lucid blockf light-mode for \
+    @'zsh-users/zsh-autosuggestions' \
+    @'zsh-users/zsh-completions' \
+    @'zdharma-continuum/fast-syntax-highlighting'
+
+zinit ice lucid wait"0a" from"gh-r" as"program" atload'eval "$(mcfly init zsh)"' 
+zinit light cantino/mcfly
