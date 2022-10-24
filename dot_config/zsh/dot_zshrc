@@ -25,11 +25,23 @@ HISTSIZE=12000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
+# cdをpushdにする
 setopt AUTO_PUSHD
+
+# コマンドを実行したときに履歴を書き込む。また、他に起動しているzshが書き込んだ履歴を即座に読み込む。
+setopt SHARE_HISTORY
+# 履歴にあるコマンドを実行したとき、古い履歴を削除
 setopt HIST_IGNORE_ALL_DUPS
+# 履歴に保存するとき、余計な空白を削除
 setopt HIST_REDUCE_BLANKS
+
+# --option=abc みたいなやつでも補完
+setopt MAGIC_EQUAL_SUBST
+
+# 日本語ファイル名を正しく表示
 setopt PRINT_EIGHT_BIT
 
+# Emacs風のキーバインド
 bindkey -e
 
 # Ctrl+← and Ctrl+→

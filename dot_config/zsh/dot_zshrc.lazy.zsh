@@ -1,3 +1,6 @@
+# 補完をTab連打ではなく矢印キーで選択する
+zstyle ':completion:*' menu select interactive
+
 # Plugins
 zinit lucid blockf light-mode for \
     @'zsh-users/zsh-autosuggestions' \
