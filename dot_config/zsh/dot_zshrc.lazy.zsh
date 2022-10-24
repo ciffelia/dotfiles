@@ -31,6 +31,6 @@ zinit light Peltoche/lsd
 # bat
 zinit ice lucid \
     as'program' from'gh-r' \
-    cp'bat-*/autocomplete/bat.zsh -> _bat' \
-    pick'bat-*/bat'
+    pick'bat-*/bat' \
+    cp'bat-*/autocomplete/bat.zsh -> _bat'
 zinit light sharkdp/bat
