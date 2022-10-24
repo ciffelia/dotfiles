@@ -1,0 +1,33 @@
+{{- $isWsl := contains "WSL" .chezmoi.kernel.osrelease -}}
+
+[user]
+	name = Ciffelia
+	email = mc.prince.0203@gmail.com
+
+[core]
+	symlinks = true
+
+{{ if $isWsl -}}
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager-core.exe
+{{- end }}
+
+[color]
+	ui = true
+
+[commit]
+	verbose = true
+
+# delta
+[core]
+	pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[add.interactive]
+  useBuiltin = false
+[delta]
+  navigate = true
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
