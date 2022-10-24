@@ -1,11 +1,3 @@
-# Starship
-zinit ice wait'!' lucid \
-    as'program' from'gh-r' \
-    atclone'./starship completions zsh > _starship' \
-    atpull"%atclone" \
-    atload'eval "$(starship init zsh)"'
-zinit light starship/starship
-
 # Plugins
 zinit lucid blockf light-mode for \
     @'zsh-users/zsh-autosuggestions' \

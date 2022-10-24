@@ -37,8 +37,13 @@ path=(
     "$path[@]"
 )
 
-# Use this prompt until starship is loaded
-PS1=$'\n'$'\n''❯ '
+# Starship
+zinit ice lucid \
+    as'program' from'gh-r' \
+    atclone'./starship completions zsh > _starship' \
+    atpull"%atclone" \
+    atload'eval "$(starship init zsh)"'
+zinit light starship/starship
 
 # Lazy load .zshrc.lazy.zsh
 zinit ice wait lucid null \
