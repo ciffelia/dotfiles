@@ -37,12 +37,6 @@ bindkey ";5C" forward-word
 bindkey ";5D" backward-word
 export WORDCHARS='*?[]~=&;!#$%^(){}<>'
 
-path=(
-    "$HOME/bin"
-    "$HOME/.local/bin"
-    "$path[@]"
-)
-
 # Starship
 zinit ice lucid \
     as'program' from'gh-r' \

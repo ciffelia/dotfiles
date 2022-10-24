@@ -8,6 +8,12 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+path=(
+    "$HOME/bin"
+    "$HOME/.local/bin"
+    "$path[@]"
+)
+
 # Snap (workaround for https://qiita.com/sameyasu/items/072882ee92bca54906d8)
 if [ -f '/etc/profile.d/apps-bin-path.sh' ]; then
     source '/etc/profile.d/apps-bin-path.sh'
