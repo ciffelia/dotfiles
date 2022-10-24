@@ -45,6 +45,14 @@ zinit ice lucid \
     atload'eval "$(starship init zsh)"'
 zinit light starship/starship
 
+# Terminal module from prezto
+zstyle ':prezto:module:terminal' auto-title 'yes'
+zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+zstyle ':prezto:module:terminal:multiplexer-title' format '%s'
+zinit ice lucid blockf
+zinit snippet PZTM::terminal
+
 # Lazy load .zshrc.lazy.zsh
 zinit ice wait lucid null \
     atinit'source "$ZDOTDIR/.zshrc.lazy.zsh"'
