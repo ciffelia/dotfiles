@@ -41,3 +41,9 @@ zinit ice lucid \
     pick'bat-*/bat' \
     cp'bat-*/autocomplete/bat.zsh -> _bat'
 zinit light sharkdp/bat
+
+# delta
+zinit ice lucid \
+    as'program' from'gh-r' \
+    pick'delta-*/delta'
+zinit light dandavison/delta
