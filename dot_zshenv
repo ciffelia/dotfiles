@@ -10,10 +10,10 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 # Snap (workaround for https://qiita.com/sameyasu/items/072882ee92bca54906d8)
 if [ -f '/etc/profile.d/apps-bin-path.sh' ]; then
-  source '/etc/profile.d/apps-bin-path.sh'
+    source '/etc/profile.d/apps-bin-path.sh'
 fi
 
 # Cargo
 if [ -f "$HOME/.cargo/env" ]; then
-  source "$HOME/.cargo/env"
+    source "$HOME/.cargo/env"
 fi
