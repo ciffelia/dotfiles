@@ -28,8 +28,14 @@ HISTFILE=~/.zsh_history
 setopt AUTO_PUSHD
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
+setopt PRINT_EIGHT_BIT
 
 bindkey -e
+
+# Ctrl+← and Ctrl+→
+bindkey ";5C" forward-word
+bindkey ";5D" backward-word
+export WORDCHARS='*?[]~=&;!#$%^(){}<>'
 
 path=(
     "$HOME/bin"
