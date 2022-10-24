@@ -6,6 +6,9 @@ zstyle ':completion:*' menu select interactive
 
 # Alias
 alias reload='exec $SHELL --login'
+alias ls='lsd'
+alias la='lsd -a'
+alias ll='lsd -la'
 
 # Plugins
 zinit lucid blockf light-mode for \
@@ -18,3 +21,9 @@ zinit ice lucid \
     as'program' from'gh-r' \
     atload'eval "$(mcfly init zsh)"'
 zinit light cantino/mcfly
+
+# lsd
+zinit ice lucid \
+    as'program' from'gh-r' \
+    pick'lsd-*/lsd'
+zinit light Peltoche/lsd

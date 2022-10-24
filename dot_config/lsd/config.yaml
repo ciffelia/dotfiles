@@ -1,0 +1,6 @@
+date: '+%Y/%m/%d %H:%M:%S'
+
+sorting:
+  dir-grouping: first
+
+header: true
