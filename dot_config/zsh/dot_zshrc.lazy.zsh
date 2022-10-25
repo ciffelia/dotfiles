@@ -12,38 +12,38 @@ alias ll='lsd -la'
 
 # pyenv
 if [ -d "$HOME/.pyenv" ]; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
+	export PYENV_ROOT="$HOME/.pyenv"
+	command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+	eval "$(pyenv init -)"
 fi
 
 # Plugins
 zinit lucid blockf light-mode for \
-    @'zsh-users/zsh-autosuggestions' \
-    @'zsh-users/zsh-completions' \
-    @'zdharma-continuum/fast-syntax-highlighting'
+	@'zsh-users/zsh-autosuggestions' \
+	@'zsh-users/zsh-completions' \
+	@'zdharma-continuum/fast-syntax-highlighting'
 
 # mcfly
 zinit ice lucid \
-    as'program' from'gh-r' \
-    atload'eval "$(mcfly init zsh)"'
+	as'program' from'gh-r' \
+	atload'eval "$(mcfly init zsh)"'
 zinit light cantino/mcfly
 
 # lsd
 zinit ice lucid \
-    as'program' from'gh-r' \
-    pick'lsd-*/lsd'
+	as'program' from'gh-r' \
+	pick'lsd-*/lsd'
 zinit light Peltoche/lsd
 
 # bat
 zinit ice lucid \
-    as'program' from'gh-r' \
-    pick'bat-*/bat' \
-    cp'bat-*/autocomplete/bat.zsh -> _bat'
+	as'program' from'gh-r' \
+	pick'bat-*/bat' \
+	cp'bat-*/autocomplete/bat.zsh -> _bat'
 zinit light sharkdp/bat
 
 # delta
 zinit ice lucid \
-    as'program' from'gh-r' \
-    pick'delta-*/delta'
+	as'program' from'gh-r' \
+	pick'delta-*/delta'
 zinit light dandavison/delta
