@@ -23,6 +23,10 @@ zinit lucid blockf light-mode for \
   @'zsh-users/zsh-completions' \
   @'zdharma-continuum/fast-syntax-highlighting'
 
+# Docker completions
+zinit ice lucid blockf as'completion'
+zinit snippet https://github.com/docker/cli/raw/master/contrib/completion/zsh/_docker
+
 # mcfly
 zinit ice lucid \
   as'program' from'gh-r' \
