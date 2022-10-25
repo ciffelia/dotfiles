@@ -1,10 +1,9 @@
 # --option=abc みたいなやつでも補完
 setopt MAGIC_EQUAL_SUBST
-
-# 補完をTab連打ではなく矢印キーで選択する
+# 補完をTab連打ではなく矢印キーで選択
 zstyle ':completion:*' menu select interactive
 
-# Alias
+# Aliases
 alias reload='exec $SHELL --login'
 alias ls='lsd'
 alias la='lsd -a'
@@ -16,15 +15,6 @@ if [ -d "$HOME/.pyenv" ]; then
   command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
-
-# Plugins
-zinit lucid blockf light-mode for \
-  @'zsh-users/zsh-autosuggestions' \
-  @'zdharma-continuum/fast-syntax-highlighting'
-
-# Docker completions
-zinit ice lucid blockf as'completion'
-zinit snippet https://github.com/docker/cli/raw/master/contrib/completion/zsh/_docker
 
 # mcfly
 zinit ice lucid \
@@ -56,6 +46,19 @@ zinit ice lucid \
   as'program' from'gh-r' \
   cp'completions/chezmoi.zsh -> _chezmoi'
 zinit light twpayne/chezmoi
+
+# Docker completions
+zinit ice lucid blockf as'completion'
+zinit snippet https://github.com/docker/cli/raw/master/contrib/completion/zsh/_docker
+
+# Fast Syntax Highlighting
+zinit ice lucid blockf
+zinit light zdharma-continuum/fast-syntax-highlighting
+
+# autosuggestions
+zinit ice lucid blockf \
+  atload'!_zsh_autosuggest_start'
+zinit light zsh-users/zsh-autosuggestions
 
 # completions
 zinit ice lucid blockf \
