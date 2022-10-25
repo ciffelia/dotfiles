@@ -20,7 +20,6 @@ fi
 # Plugins
 zinit lucid blockf light-mode for \
   @'zsh-users/zsh-autosuggestions' \
-  @'zsh-users/zsh-completions' \
   @'zdharma-continuum/fast-syntax-highlighting'
 
 # Docker completions
@@ -57,3 +56,8 @@ zinit ice lucid \
   as'program' from'gh-r' \
   cp'completions/chezmoi.zsh -> _chezmoi'
 zinit light twpayne/chezmoi
+
+# completions
+zinit ice lucid blockf \
+  atload'zicompinit; zicdreplay'
+zinit light zsh-users/zsh-completions
