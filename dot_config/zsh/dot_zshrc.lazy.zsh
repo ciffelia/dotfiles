@@ -51,3 +51,9 @@ zinit ice lucid \
   as'program' from'gh-r' \
   pick'delta-*/delta'
 zinit light dandavison/delta
+
+# chezmoi
+zinit ice lucid \
+  as'program' from'gh-r' \
+  cp'completions/chezmoi.zsh -> _chezmoi'
+zinit light twpayne/chezmoi
