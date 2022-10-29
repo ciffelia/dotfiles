@@ -5,9 +5,11 @@ README.md
 # zsh
 .zshenv
 .config/zsh
+
 # lsd
 .config/lsd
+
 {{- else }}
 # PowerShell
-Documents/PowerShell
+Documents
 {{- end }}
