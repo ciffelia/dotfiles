@@ -2,14 +2,14 @@
 
 format = "${custom.wsl}$all"
 
+{{- if $isWsl }}
 [container]
-{{ if $isWsl -}}
 # Workaround for https://github.com/starship/starship/issues/3821
 disabled = true
 {{- end }}
 
+{{- if $isWsl }}
 [git_status]
-{{ if $isWsl -}}
 windows_starship = "/mnt/c/Users/prince/scoop/shims/starship.exe"
 {{- end }}
 
