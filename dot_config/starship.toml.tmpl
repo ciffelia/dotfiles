@@ -1,4 +1,4 @@
-{{- $isWsl := contains "WSL" .chezmoi.kernel.osrelease -}}
+{{- $isWsl := and (eq .chezmoi.os "linux") (contains "WSL" .chezmoi.kernel.osrelease) -}}
 
 format = "${custom.wsl}$all"
 

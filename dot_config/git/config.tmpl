@@ -1,8 +1,4 @@
-{{- $isWsl := contains "WSL" .chezmoi.kernel.osrelease -}}
-
-[user]
-  name = Ciffelia
-  email = mc.prince.0203@gmail.com
+{{- $isWsl := and (eq .chezmoi.os "linux") (contains "WSL" .chezmoi.kernel.osrelease) -}}
 
 [core]
   autocrlf = input
@@ -31,16 +27,8 @@
 [commit]
   verbose = true
 
-# delta
-[core]
-  pager = delta
-[interactive]
-  diffFilter = delta --color-only
-[add.interactive]
-  useBuiltin = false
-[delta]
-  navigate = true
-[merge]
-  conflictstyle = diff3
-[diff]
-  colorMoved = default
+[include]
+  path = include/delta.conf
+  path = include/identity.conf
+  path = include/local.conf
+  path = include/vscode.conf
