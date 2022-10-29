@@ -1,0 +1,11 @@
+date: "+%Y/%m/%d %H:%M:%S"
+
+blocks:
+  - date
+  - size
+  - name
+
+sorting:
+  dir-grouping: first
+
+header: true
