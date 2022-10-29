@@ -47,10 +47,6 @@ zinit ice lucid \
   cp'completions/chezmoi.zsh -> _chezmoi'
 zinit light twpayne/chezmoi
 
-# Docker completions
-zinit ice lucid blockf as'completion'
-zinit snippet https://github.com/docker/cli/raw/master/contrib/completion/zsh/_docker
-
 # Fast Syntax Highlighting
 zinit ice lucid blockf
 zinit light zdharma-continuum/fast-syntax-highlighting
