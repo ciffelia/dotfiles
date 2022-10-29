@@ -6,10 +6,18 @@
 
 [core]
   symlinks = true
+[fetch]
+  prune = true
+[pull]
+  ff = only
+[push]
+  autoSetupRemote = true
 
-{{ if $isWsl -}}
 [credential]
+{{- if $isWsl }}
   helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager-core.exe
+{{- else }}
+  helper = store
 {{- end }}
 
 [color]
