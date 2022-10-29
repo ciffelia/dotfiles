@@ -2,10 +2,6 @@
 README.md
 
 {{ if eq .chezmoi.os "windows" -}}
-*
-!.config
-
-.config/*
-!.config/git
-!.config/starship.toml
+.zshenv
+.config/zsh
 {{- end }}
