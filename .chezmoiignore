@@ -7,4 +7,7 @@ README.md
 .config/zsh
 # lsd
 .config/lsd
+{{- else }}
+# PowerShell
+Documents/PowerShell
 {{- end }}
