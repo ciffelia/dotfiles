@@ -5,7 +5,7 @@
   email = mc.prince.0203@gmail.com
 
 [core]
-	autocrlf = input
+  autocrlf = input
   symlinks = true
 [fetch]
   prune = true
@@ -15,7 +15,11 @@
   autoSetupRemote = true
 
 [credential]
-{{- if $isWsl }}
+{{- if eq .chezmoi.os "windows" }}
+  helper = manager-core
+{{- else if eq .chezmoi.os "darwin" }}
+  helper = osxkeychain
+{{- else if $isWsl }}
   helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager-core.exe
 {{- else }}
   helper = store
