@@ -21,6 +21,11 @@ if (( $+commands[kubectl] )); then
   source <(kubectl completion zsh)
 fi
 
+# Helm
+if (( $+commands[helm] )); then
+  source <(helm completion zsh)
+fi
+
 # mcfly
 zinit ice lucid \
   as'program' from'gh-r' \
