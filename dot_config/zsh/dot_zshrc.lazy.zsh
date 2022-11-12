@@ -16,7 +16,7 @@ if [ -d "$HOME/.pyenv" ]; then
   eval "$(pyenv init -)"
 fi
 
-# Kubernetes
+# kubectl (Kubernetes)
 if (( $+commands[kubectl] )); then
   source <(kubectl completion zsh)
 fi
