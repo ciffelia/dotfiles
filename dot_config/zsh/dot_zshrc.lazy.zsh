@@ -16,6 +16,11 @@ if [ -d "$HOME/.pyenv" ]; then
   eval "$(pyenv init -)"
 fi
 
+# Kubernetes
+if (( $+commands[kubectl] )); then
+  source <(kubectl completion zsh)
+fi
+
 # mcfly
 zinit ice lucid \
   as'program' from'gh-r' \
