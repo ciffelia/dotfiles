@@ -15,6 +15,8 @@ vim.opt.number = true
 vim.opt.cursorline = true
 -- ファイル名を端末のタイトルバーに表示
 vim.opt.title = true
+-- 端末のカーソルを変更しない
+vim.opt.guicursor = ''
 
 -- Tab
 -- 入力モードでTabキー押下時に半角スペースを挿入
