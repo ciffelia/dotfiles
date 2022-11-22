@@ -57,6 +57,20 @@ zinit ice lucid \
   cp'completions/chezmoi.zsh -> _chezmoi'
 zinit light twpayne/chezmoi
 
+# neovim
+zinit ice lucid \
+  as'program' from'gh-r' \
+  pick'nvim-linux64/bin/*' \
+  nocompletions
+zinit light neovim/neovim
+
+# packer.nvim が存在しない場合はダウンロードする
+# 一度ダウンロードしたあとは packer.nvim 自身が管理する
+if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
+  git clone --filter=blob:none https://github.com/wbthomason/packer.nvim \
+    $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
+fi
+
 # Fast Syntax Highlighting
 zinit ice lucid blockf
 zinit light zdharma-continuum/fast-syntax-highlighting

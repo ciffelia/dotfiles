@@ -9,6 +9,9 @@ README.md
 # lsd
 .config/lsd
 
+# neovim
+.config/nvim
+
 {{- else }}
 # PowerShell
 Documents
