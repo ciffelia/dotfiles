@@ -4,7 +4,7 @@ setopt MAGIC_EQUAL_SUBST
 zstyle ':completion:*' menu select interactive
 
 # Aliases
-alias reload='exec $SHELL --login'
+alias reload='exec $SHELL'
 alias ls='lsd'
 alias la='lsd -a'
 alias ll='lsd -la'
