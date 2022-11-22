@@ -39,6 +39,11 @@ setopt AUTO_PUSHD
 # 日本語ファイル名を正しく表示
 setopt PRINT_EIGHT_BIT
 
+# --option=abc みたいなやつでも補完
+setopt MAGIC_EQUAL_SUBST
+# 補完をTab連打ではなく矢印キーで選択
+zstyle ':completion:*' menu select interactive
+
 # Emacs風のキーバインド
 bindkey -e
 # Ctrl+← and Ctrl+→
