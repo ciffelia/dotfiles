@@ -1,55 +1,8 @@
-### Added by Zinit's installer
-if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
-  print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
-  command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
-  command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
-    print -P "%F{33} %F{34}Installation successful.%f%b" || \
-    print -P "%F{160} The clone has failed.%f%b"
-fi
+SCRIPTS_DIR="$ZDOTDIR/scripts"
 
-source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-#zinit light-mode for \
-#  zdharma-continuum/zinit-annex-as-monitor \
-#  zdharma-continuum/zinit-annex-bin-gem-node \
-#  zdharma-continuum/zinit-annex-patch-dl \
-#  zdharma-continuum/zinit-annex-rust
-
-### End of Zinit's installer chunk
-
-# 履歴をメモリ上に12000件まで保存
-HISTSIZE=12000
-# 履歴をファイル上に10000件まで保存
-SAVEHIST=10000
-HISTFILE=~/.zsh_history
-# コマンドを実行したときに履歴を書き込む。また、他に起動しているzshが書き込んだ履歴を即座に読み込む。
-setopt SHARE_HISTORY
-# 履歴にあるコマンドを実行したとき、古い履歴を削除
-setopt HIST_IGNORE_ALL_DUPS
-# 履歴に保存するとき、余計な空白を削除
-setopt HIST_REDUCE_BLANKS
-
-# cdをpushdにする
-setopt AUTO_PUSHD
-
-# 日本語ファイル名を正しく表示
-setopt PRINT_EIGHT_BIT
-
-# --option=abc みたいなやつでも補完
-setopt MAGIC_EQUAL_SUBST
-# 補完をTab連打ではなく矢印キーで選択
-zstyle ':completion:*' menu select interactive
-
-# Emacs風のキーバインド
-bindkey -e
-# Ctrl+← and Ctrl+→
-bindkey ";5C" forward-word
-bindkey ";5D" backward-word
-WORDCHARS='*?[]~=&;!#$%^(){}<>'
+source "$SCRIPTS_DIR/load_zinit.zsh"
+source "$SCRIPTS_DIR/set_options.zsh"
+source "$SCRIPTS_DIR/set_aliases.zsh"
 
 # Starship
 zinit ice lucid \
@@ -67,7 +20,7 @@ zstyle ':prezto:module:terminal:multiplexer-title' format '%s'
 zinit ice lucid blockf
 zinit snippet PZTM::terminal
 
-# Lazy load .zshrc.lazy.zsh
+# Lazy load
 zinit ice wait lucid null \
-  atinit'source "$ZDOTDIR/.zshrc.lazy.zsh"'
+  atinit'source "$SCRIPTS_DIR/lazy_entrypoint.zsh"'
 zinit light 'zdharma-continuum/null'

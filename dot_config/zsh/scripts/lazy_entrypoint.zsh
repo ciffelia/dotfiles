@@ -1,9 +1,3 @@
-# Aliases
-alias reload='exec $SHELL'
-alias ls='lsd'
-alias la='lsd -a'
-alias ll='lsd -la'
-
 # pyenv
 if [ -d "$HOME/.pyenv" ]; then
   export PYENV_ROOT="$HOME/.pyenv"
