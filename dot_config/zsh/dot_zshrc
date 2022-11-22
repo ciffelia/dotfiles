@@ -49,7 +49,7 @@ bindkey -e
 # Ctrl+← and Ctrl+→
 bindkey ";5C" forward-word
 bindkey ";5D" backward-word
-export WORDCHARS='*?[]~=&;!#$%^(){}<>'
+WORDCHARS='*?[]~=&;!#$%^(){}<>'
 
 # Starship
 zinit ice lucid \
