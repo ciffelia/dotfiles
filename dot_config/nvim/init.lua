@@ -1,8 +1,8 @@
 require('plugins')
 
-vim.cmd("colorscheme nightfox")
+vim.cmd('colorscheme nightfox')
 require('lualine').setup()
-require("scrollbar").setup()
+require('scrollbar').setup()
 
 -- 入力
 -- 行末の1文字先までカーソルを移動できるように
