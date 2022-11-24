@@ -59,3 +59,5 @@ if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
   git clone --filter=blob:none https://github.com/wbthomason/packer.nvim.git \
     $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
 fi
+
+source "$SCRIPTS_DIR/setup_apps.local.zsh"

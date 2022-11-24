@@ -27,3 +27,5 @@ bindkey -e
 bindkey ";5C" forward-word
 bindkey ";5D" backward-word
 WORDCHARS='*?[]~=&;!#$%^(){}<>'
+
+source "$SCRIPTS_DIR/set_options.local.zsh"
