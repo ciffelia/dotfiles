@@ -43,6 +43,7 @@ zinit light dandavison/delta
 # chezmoi
 zinit ice lucid \
   as'program' from'gh-r' \
+  bpick'chezmoi_*.tar.gz' \
   cp'completions/chezmoi.zsh -> _chezmoi'
 zinit light twpayne/chezmoi
 
