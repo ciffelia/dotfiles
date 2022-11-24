@@ -49,7 +49,7 @@ zinit light twpayne/chezmoi
 # neovim
 zinit ice lucid \
   as'program' from'gh-r' \
-  pick'nvim-linux64/bin/*' \
+  pick'nvim-*/bin/nvim' \
   nocompletions
 zinit light neovim/neovim
 
