@@ -3,6 +3,7 @@ SCRIPTS_DIR="$ZDOTDIR/scripts"
 source "$SCRIPTS_DIR/load_zinit.zsh"
 source "$SCRIPTS_DIR/set_options.zsh"
 source "$SCRIPTS_DIR/set_aliases.zsh"
+source "$SCRIPTS_DIR/local.zsh"
 
 # Starship
 zinit ice lucid \
