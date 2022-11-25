@@ -1,5 +1,5 @@
-source "$SCRIPTS_DIR/setup_apps.zsh"
-source "$SCRIPTS_DIR/local.lazy.zsh"
+source "$SCRIPTS_DIR/lazy/setup_apps.zsh"
+source "$SCRIPTS_DIR/lazy/local.zsh"
 
 # Fast Syntax Highlighting
 zinit ice lucid blockf

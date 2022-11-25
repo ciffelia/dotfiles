@@ -23,5 +23,5 @@ zinit snippet PZTM::terminal
 
 # Lazy load
 zinit ice wait lucid null \
-  atinit'source "$SCRIPTS_DIR/lazy_entrypoint.zsh"'
+  atinit'source "$SCRIPTS_DIR/lazy/entrypoint.zsh"'
 zinit light 'zdharma-continuum/null'
