@@ -1,11 +1,7 @@
 {{- $isWsl := and (eq .chezmoi.os "linux") (contains "WSL" .chezmoi.kernel.osrelease) -}}
 
 [core]
-{{- if eq .chezmoi.os "windows" }}
-  autocrlf = true
-{{- else }}
   autocrlf = input
-{{- end }}
   symlinks = true
 [fetch]
   prune = true
