@@ -18,6 +18,7 @@ fi
 # mcfly
 zinit ice lucid \
   as'program' from'gh-r' \
+  bpick'*-x86_64-*' \
   atload'eval "$(mcfly init zsh)"'
 zinit light cantino/mcfly
 
@@ -37,6 +38,7 @@ zinit light sharkdp/bat
 # delta
 zinit ice lucid \
   as'program' from'gh-r' \
+  bpick'*-musl.*' \
   pick'delta-*/delta'
 zinit light dandavison/delta
 
