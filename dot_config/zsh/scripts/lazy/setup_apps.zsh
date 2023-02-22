@@ -56,6 +56,12 @@ zinit ice lucid \
   nocompletions
 zinit light neovim/neovim
 
+# ghq
+zinit ice lucid \
+  as'program' from'gh-r' \
+  pick'ghq_*/ghq'
+zinit light x-motemen/ghq
+
 # packer.nvim が存在しない場合はダウンロードする
 # 一度ダウンロードしたあとは packer.nvim 自身が管理してくれる
 if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
