@@ -3,8 +3,12 @@
 [core]
   autocrlf = input
   symlinks = true
+[color]
+  ui = true
 [init]
   defaultBranch = main
+[commit]
+  verbose = true
 [fetch]
   prune = true
 [pull]
@@ -22,12 +26,6 @@
 {{- else }}
   helper = store
 {{- end }}
-
-[color]
-  ui = true
-
-[commit]
-  verbose = true
 
 [include]
   path = include/alias.conf
