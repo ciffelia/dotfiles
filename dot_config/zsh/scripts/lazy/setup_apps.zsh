@@ -19,7 +19,7 @@ zinit light cantino/mcfly
 zinit ice lucid \
   as'program' from'gh-r' \
   pick'lsd-*/lsd'
-zinit light Peltoche/lsd
+zinit light lsd-rs/lsd
 
 # bat
 zinit ice lucid \
@@ -29,6 +29,7 @@ zinit ice lucid \
 zinit light sharkdp/bat
 
 # delta
+# NOTE: glibcのバージョンが合わない環境があるのでmuslを使う
 zinit ice lucid \
   as'program' from'gh-r' \
   bpick'*-musl.*' \
@@ -43,8 +44,10 @@ zinit ice lucid \
 zinit light twpayne/chezmoi
 
 # neovim
+# NOTE: GitHubのlatest releaseがバージョンタグではなく"stable"タグを指している。zinit updateができなくて困るのでバージョンタグを指定している。
 zinit ice lucid \
   as'program' from'gh-r' \
+  ver'v0.9.1' \
   pick'nvim-*/bin/nvim' \
   nocompletions
 zinit light neovim/neovim
