@@ -29,7 +29,7 @@ zinit ice lucid \
 zinit light sharkdp/bat
 
 # delta
-# NOTE: glibcのバージョンが合わない環境があるのでmuslを使う
+# NOTE: Ubuntu 20.04ではglibcのバージョンが合わないのでmuslを使う
 zinit ice lucid \
   as'program' from'gh-r' \
   bpick'*-musl.*' \
