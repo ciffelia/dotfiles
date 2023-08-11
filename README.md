@@ -9,7 +9,15 @@
 
 ### macOS / Linux
 
-- zsh
+- fish
+- Homebrew
+- bat
+- delta
+- ghq
+- lsd
+- mcfly
+- neovim
+- starship
 
 ## Setup
 
@@ -32,22 +40,15 @@ chezmoi apply
 ### macOS / Linux
 
 ```sh
-# Download chezmoi to ~/bin
-sh -c "$(curl -fsLS get.chezmoi.io)"
+# Install chezmoi
+brew install chezmoi
 
 # Clone this repository
-~/bin/chezmoi init https://github.com/ciffelia/dotfiles.git
+chezmoi init https://github.com/ciffelia/dotfiles.git
 
 # See what changes would be made to the home directory
-~/bin/chezmoi diff
+chezmoi diff
 
 # Apply the changes
-~/bin/chezmoi apply
-
-# Restart zsh (or exit bash and start zsh)
-exit
-
-# Now chezmoi has been installed by zinit.
-# You can delete chezmoi from ~/bin.
-rm ~/bin/chezmoi
+chezmoi apply
 ```
