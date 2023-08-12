@@ -1,4 +1,5 @@
 source "$SCRIPTS_DIR/lazy/setup_apps.zsh"
+source "$SCRIPTS_DIR/lazy/functions.zsh"
 source "$SCRIPTS_DIR/lazy/local.zsh"
 
 # Fast Syntax Highlighting
