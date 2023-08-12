@@ -8,6 +8,33 @@ if (( $+commands[helm] )); then
   source <(helm completion zsh)
 fi
 
+# fzf
+zinit ice lucid \
+  as'program' from'gh-r' \
+  ver'0.42.0'
+zinit light junegunn/fzf
+
+zinit ice lucid \
+  id-as'junegunn/fzf/shell' \
+  as'null' \
+  ver'0.42.0' \
+  pick'shell/completion.zsh' \
+  src'shell/key-bindings.zsh'
+zinit light junegunn/fzf
+
+# cf. https://tech-broccoli.life/articles/engineer/use-fzf
+export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --border \
+  --preview-window 'right:50%' \
+  --bind 'ctrl-/:change-preview-window(80%|hidden|)' \
+  --bind 'shift-up:preview-half-page-up,shift-down:preview-half-page-down'"
+
+# onefetch
+zinit ice lucid \
+  as'program' from'gh-r' \
+  atclone'./onefetch --generate zsh > _onefetch' \
+  atpull"%atclone"
+zinit light o2sh/onefetch
+
 # mcfly
 zinit ice lucid \
   as'program' from'gh-r' \
