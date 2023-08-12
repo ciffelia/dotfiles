@@ -1,4 +1,4 @@
-alias reload='exec $SHELL --login'
+alias reload='exec "$SHELL" --login'
 
 alias ls='lsd'
 alias la='lsd -a'
