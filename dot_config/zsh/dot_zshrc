@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 SCRIPTS_DIR="$ZDOTDIR/scripts"
 
 source "$SCRIPTS_DIR/load_zinit.zsh"
