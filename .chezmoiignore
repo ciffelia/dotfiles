@@ -2,10 +2,6 @@
 README.md
 
 {{ if eq .chezmoi.os "windows" -}}
-# zsh
-.zshenv
-.config/zsh
-
 # lsd
 .config/lsd
 

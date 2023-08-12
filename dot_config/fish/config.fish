@@ -1,15 +1,14 @@
-set -x LANG en_US.UTF-8
-set -x LC_ALL en_US.UTF-8
-set -x EDITOR nvim
-
-eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-
 if status is-interactive
+    if not functions -q fisher
+        curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
+        fisher install jorgebucaran/fisher
+    end
+
+    mcfly init fish | source
+
     alias reload='exec "$SHELL" --login'
 
     alias ls='lsd'
     alias la='lsd -a'
     alias ll='lsd -la'
-
-    mcfly init fish | source
 end
