@@ -33,6 +33,11 @@ if [ -d "$HOME/.volta" ]; then
   export PATH="$VOLTA_HOME/bin:$PATH"
 fi
 
+# rye
+if [ -f "$HOME/.rye/env" ]; then
+  source "$HOME/.rye/env"
+fi
+
 # pyenv
 if [ -d "$HOME/.pyenv" ]; then
   export PYENV_ROOT="$HOME/.pyenv"
