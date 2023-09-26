@@ -10,6 +10,7 @@
 ### macOS / Linux
 
 - zsh
+- unzip
 - Locale `en_US.UTF-8` is available.
   - If not, run `sudo locale-gen en_US.UTF-8`.
 
