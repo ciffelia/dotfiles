@@ -11,13 +11,13 @@ fi
 # fzf
 zinit ice lucid \
   as'program' from'gh-r' \
-  ver'0.42.0'
+  ver'0.44.1'
 zinit light junegunn/fzf
 
 zinit ice lucid \
   id-as'junegunn/fzf/shell' \
   as'null' \
-  ver'0.42.0' \
+  ver'0.44.1' \
   pick'shell/completion.zsh' \
   src'shell/key-bindings.zsh'
 zinit light junegunn/fzf
@@ -72,7 +72,7 @@ zinit light twpayne/chezmoi
 # NOTE: GitHubのlatest releaseがバージョンタグではなく"stable"タグを指している。zinit updateができなくて困るのでバージョンタグを指定している。
 zinit ice lucid \
   as'program' from'gh-r' \
-  ver'v0.9.1' \
+  ver'v0.9.4' \
   pick'nvim-*/bin/nvim' \
   nocompletions
 zinit light neovim/neovim
