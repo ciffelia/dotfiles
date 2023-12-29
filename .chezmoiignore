@@ -12,6 +12,9 @@ README.md
 # neovim
 .config/nvim
 
+# Cargo
+.cargo
+
 {{- else }}
 # PowerShell
 Documents
