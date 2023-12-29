@@ -61,6 +61,11 @@ zinit ice lucid \
   pick'delta-*/delta'
 zinit light dandavison/delta
 
+# difftastic
+zinit ice lucid \
+  as'program' from'gh-r'
+zinit light Wilfred/difftastic
+
 # chezmoi
 zinit ice lucid \
   as'program' from'gh-r' \
