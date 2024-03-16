@@ -18,8 +18,7 @@ zinit light sharkdp/bat
 # checksec
 zinit ice lucid \
   as'program' \
-  pick'checksec' \
-  cp'extras/zsh/_checksec -> _checksec'
+  pick'checksec'
 zinit light slimm609/checksec.sh
 
 # chezmoi
