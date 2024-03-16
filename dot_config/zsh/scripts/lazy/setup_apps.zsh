@@ -43,15 +43,14 @@ zinit light Wilfred/difftastic
 # fzf
 zinit ice lucid \
   as'program' from'gh-r' \
-  ver'0.44.1'
+  ver'0.48.0'
 zinit light junegunn/fzf
 
 zinit ice lucid \
   id-as'junegunn/fzf/shell' \
   as'null' \
-  ver'0.44.1' \
-  pick'shell/completion.zsh' \
-  src'shell/key-bindings.zsh'
+  ver'0.48.0' \
+  multisrc'shell/{completion,key-bindings}.zsh'
 zinit light junegunn/fzf
 
 # cf. https://tech-broccoli.life/articles/engineer/use-fzf
