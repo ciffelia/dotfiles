@@ -15,6 +15,13 @@ zinit ice lucid \
   cp'bat-*/autocomplete/bat.zsh -> _bat'
 zinit light sharkdp/bat
 
+# checksec
+zinit ice lucid \
+  as'program' \
+  pick'checksec' \
+  cp'extras/zsh/_checksec -> _checksec'
+zinit light slimm609/checksec.sh
+
 # chezmoi
 zinit ice lucid \
   as'program' from'gh-r' \
