@@ -79,10 +79,8 @@ zinit ice lucid \
 zinit light cantino/mcfly
 
 # neovim
-# NOTE: GitHubのlatest releaseがバージョンタグではなく"stable"タグを指している。zinit updateができなくて困るのでバージョンタグを指定している。
 zinit ice lucid \
   as'program' from'gh-r' \
-  ver'v0.9.4' \
   pick'nvim-*/bin/nvim' \
   nocompletions
 zinit light neovim/neovim
