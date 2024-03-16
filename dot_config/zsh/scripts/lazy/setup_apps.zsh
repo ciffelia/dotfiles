@@ -98,7 +98,7 @@ fi
 zinit ice lucid \
   as'program' from'gh-r' \
   atclone'./onefetch --generate zsh > _onefetch' \
-  atpull"%atclone"
+  atpull'%atclone'
 zinit light o2sh/onefetch
 
 # rclone
