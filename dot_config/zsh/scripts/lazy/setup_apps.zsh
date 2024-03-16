@@ -32,7 +32,9 @@ zinit light twpayne/chezmoi
 # delta
 zinit ice lucid \
   as'program' from'gh-r' \
-  pick'delta-*/delta'
+  pick'delta-*/delta' \
+  atclone'./delta-*/delta --generate-completion zsh > _delta' \
+  atpull'%atclone'
 zinit light dandavison/delta
 
 # difftastic
