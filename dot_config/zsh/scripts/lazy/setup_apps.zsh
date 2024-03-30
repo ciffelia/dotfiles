@@ -107,3 +107,9 @@ zinit ice lucid \
   atclone'./rclone-*/rclone completion zsh _rclone' \
   atpull'%atclone'
 zinit light rclone/rclone
+
+# ripgrep
+zinit ice lucid \
+  as'program' from'gh-r' \
+  pick'ripgrep-*/rg'
+zinit light BurntSushi/ripgrep
