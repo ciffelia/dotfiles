@@ -27,10 +27,13 @@
   helper = store
 {{- end }}
 
+# VSCodeのDev Container使用時はGitのinclude.pathが効かないため、
+# Dev Containerの中でも適用したい設定はChezmoiでincludeする
+{{ include (joinPath .chezmoi.sourceFile "../include/alias.conf") }}
+{{ include (joinPath .chezmoi.sourceFile "../include/identity.conf") }}
+
 [include]
-  path = include/alias.conf
   path = include/delta.conf
   path = include/difftastic.conf
-  path = include/identity.conf
   path = include/local.conf
   path = include/vscode.conf
