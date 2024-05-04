@@ -113,3 +113,11 @@ zinit ice lucid \
   as'program' from'gh-r' \
   pick'ripgrep-*/rg'
 zinit light BurntSushi/ripgrep
+
+# tfenv
+export TFENV_CONFIG_DIR=${XDG_CONFIG_HOME:-$HOME/.config}/tfenv
+zinit ice lucid \
+  as'program' \
+  ver'v3.0.0' \
+  pick'bin/*'
+zinit light tfutils/tfenv
