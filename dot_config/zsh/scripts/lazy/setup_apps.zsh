@@ -66,6 +66,12 @@ zinit ice lucid \
   pick'ghq_*/ghq'
 zinit light x-motemen/ghq
 
+# kubeseal (Sealed Secrets)
+zinit ice lucid \
+  as'program' from'gh-r' \
+  ver'v0.27.1'
+zinit light bitnami-labs/sealed-secrets
+
 # lsd
 zinit ice lucid \
   as'program' from'gh-r' \
