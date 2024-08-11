@@ -127,3 +127,9 @@ zinit ice lucid \
   ver'v3.0.0' \
   pick'bin/*'
 zinit light tfutils/tfenv
+
+# yq
+zinit ice lucid \
+  as'program' from'gh-r' \
+  mv'yq_* -> yq'
+zinit light mikefarah/yq
