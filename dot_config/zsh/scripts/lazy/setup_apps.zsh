@@ -131,5 +131,7 @@ zinit light tfutils/tfenv
 # yq
 zinit ice lucid \
   as'program' from'gh-r' \
-  mv'yq_* -> yq'
+  mv'yq_* -> yq' \
+  atclone'./yq shell-completion zsh > _yq' \
+  atpull'%atclone'
 zinit light mikefarah/yq
