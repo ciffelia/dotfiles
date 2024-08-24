@@ -33,11 +33,6 @@ zinit ice lucid \
   as'program' from'gh-r'
 zinit light cilium/cilium-cli
 
-# Cilium Hubble CLI
-zinit ice lucid \
-  as'program' from'gh-r'
-zinit light cilium/hubble
-
 # delta
 zinit ice lucid \
   as'program' from'gh-r' \
