@@ -28,6 +28,16 @@ zinit ice lucid \
   cp'completions/chezmoi.zsh -> _chezmoi'
 zinit light twpayne/chezmoi
 
+# Cilium CLI
+zinit ice lucid \
+  as'program' from'gh-r'
+zinit light cilium/cilium-cli
+
+# Cilium Hubble CLI
+zinit ice lucid \
+  as'program' from'gh-r'
+zinit light cilium/hubble
+
 # delta
 zinit ice lucid \
   as'program' from'gh-r' \
