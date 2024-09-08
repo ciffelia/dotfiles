@@ -27,6 +27,12 @@ if [ -f "$HOME/.cargo/env" ]; then
   source "$HOME/.cargo/env"
 fi
 
+# Deno
+if [ -d "$HOME/.deno" ]; then
+  export DENO_INSTALL="$HOME/.deno"
+  export PATH="$DENO_INSTALL/bin:$PATH"
+fi
+
 # Volta
 if [ -d "$HOME/.volta" ]; then
   export VOLTA_HOME="$HOME/.volta"
