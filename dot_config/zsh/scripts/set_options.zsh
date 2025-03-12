@@ -7,6 +7,8 @@ HISTFILE=~/.zsh_history
 setopt SHARE_HISTORY
 # 履歴にあるコマンドを実行したとき、古い履歴を削除
 setopt HIST_IGNORE_ALL_DUPS
+# コマンドの先頭にスペースがある場合は履歴に残さない
+setopt HIST_IGNORE_SPACE
 # 履歴に保存するとき、余計な空白を削除
 setopt HIST_REDUCE_BLANKS
 
