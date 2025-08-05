@@ -5,6 +5,13 @@ zinit ice lucid \
   cp'bat-*/autocomplete/bat.zsh -> _bat'
 zinit light sharkdp/bat
 
+# bun
+zinit ice lucid \
+  as'program' from'gh-r' \
+  bpick'bun-*-x64.zip' \
+  pick'bun-*/bun'
+zinit light oven-sh/bun
+
 # checksec
 zinit ice lucid \
   as'program' \
