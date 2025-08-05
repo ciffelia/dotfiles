@@ -1,57 +1,56 @@
-# bat
-# if (( $+commands[bat] )); then
-#   source <(bat --completion zsh)
-# fi
+completions_dir=${XDG_DATA_HOME:-$HOME/.local/share}/my-zsh-completions
 
-# chezmoi
-if (( $+commands[chezmoi] )); then
-  source <(chezmoi completion zsh)
-fi
+fpath=($fpath $completions_dir)
 
-# delta
-if (( $+commands[delta] )); then
-  source <(delta --generate-completion zsh)
-fi
+function refresh-completions () {
+  rm -rf "$completions_dir"
+  mkdir -p "$completions_dir"
 
-# Helm
-if (( $+commands[helm] )); then
-  source <(helm completion zsh)
-fi
+  if (( $+commands[bat] )); then
+    bat --completion zsh > "$completions_dir/_bat"
+  fi
 
-# kubectl
-if (( $+commands[kubectl] )); then
-  source <(kubectl completion zsh)
-fi
+  if (( $+commands[chezmoi] )); then
+    chezmoi completion zsh > "$completions_dir/_chezmoi"
+  fi
 
-# mise
-if (( $+commands[mise] )); then
-  source <(mise completion zsh)
-fi
+  if (( $+commands[delta] )); then
+    delta --generate-completion zsh > "$completions_dir/_delta"
+  fi
 
-# onefetch
-if (( $+commands[onefetch] )); then
-  source <(onefetch --generate zsh)
-fi
+  if (( $+commands[helm] )); then
+    helm completion zsh > "$completions_dir/_helm"
+  fi
 
-# pdftrim
-if (( $+commands[pdftrim] )); then
-  source <(pdftrim --generate-completion zsh)
-fi
+  if (( $+commands[kubectl] )); then
+    kubectl completion zsh > "$completions_dir/_kubectl"
+  fi
 
-# rclone
-if (( $+commands[rclone] )); then
-  source <(rclone completion zsh -)
-fi
+  if (( $+commands[mise] )); then
+    mise completion zsh > "$completions_dir/_mise"
+  fi
 
-# uv
-if (( $+commands[uv] )); then
-  source <(uv generate-shell-completion zsh)
-fi
-if (( $+commands[uvx] )); then
-  source <(uvx --generate-shell-completion zsh)
-fi
+  if (( $+commands[onefetch] )); then
+    onefetch --generate zsh > "$completions_dir/_onefetch"
+  fi
 
-# yq
-if (( $+commands[yq] )); then
-  source <(yq shell-completion zsh)
-fi
+  if (( $+commands[pdftrim] )); then
+    pdftrim --generate-completion zsh > "$completions_dir/_pdftrim"
+  fi
+
+  if (( $+commands[rclone] )); then
+    rclone completion zsh "$completions_dir/_rclone"
+  fi
+
+  if (( $+commands[uv] )); then
+    uv generate-shell-completion zsh > "$completions_dir/_uv"
+  fi
+
+  if (( $+commands[uvx] )); then
+    uvx --generate-shell-completion zsh > "$completions_dir/_uvx"
+  fi
+
+  if (( $+commands[yq] )); then
+    yq shell-completion zsh > "$completions_dir/_yq"
+  fi
+}

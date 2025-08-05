@@ -1,4 +1,5 @@
 source "$SCRIPTS_DIR/lazy/setup_apps.zsh"
+source "$SCRIPTS_DIR/lazy/setup_completions.zsh"
 source "$SCRIPTS_DIR/lazy/functions.zsh"
 source "$SCRIPTS_DIR/lazy/local.zsh"
 
@@ -15,7 +16,3 @@ zinit light zsh-users/zsh-completions
 zinit ice lucid blockf \
   atload'!_zsh_autosuggest_start'
 zinit light zsh-users/zsh-autosuggestions
-
-# Due to bug in zinit, compdef needs to be called after loading zicompinit
-# See: https://github.com/zdharma-continuum/zinit/issues/654
-source "$SCRIPTS_DIR/lazy/setup_completions.zsh"
