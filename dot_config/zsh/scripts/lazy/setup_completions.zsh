@@ -54,3 +54,7 @@ function refresh-completions () {
     yq shell-completion zsh > "$completions_dir/_yq"
   fi
 }
+
+if [[ ! -e "$completions_dir" ]]; then
+  refresh-completions
+fi
