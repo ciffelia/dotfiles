@@ -10,6 +10,7 @@ export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --border \
 # mcfly
 source <(mcfly init zsh)
 
+# Neovim
 # packer.nvim が存在しない場合はダウンロードする
 # 一度ダウンロードしたあとは packer.nvim 自身が管理してくれる
 if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
