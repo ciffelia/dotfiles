@@ -8,14 +8,7 @@ source "$SCRIPTS_DIR/set_aliases.zsh"
 source "$SCRIPTS_DIR/local.zsh"
 
 source <(mise activate zsh)
-
-# Starship
-zinit ice lucid \
-  as'program' from'gh-r' \
-  atclone'./starship completions zsh > _starship' \
-  atpull"%atclone" \
-  atload'eval "$(starship init zsh)"'
-zinit light starship/starship
+source <(starship init zsh)
 
 # 端末のウィンドウやタブのタイトル設定
 zstyle ':prezto:module:terminal' auto-title 'yes'
