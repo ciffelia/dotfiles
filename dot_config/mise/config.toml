@@ -1,8 +1,6 @@
 [tools]
 bat = "latest"
-bun = "latest"
 cosign = "latest"
-"ubi:slimm609/checksec.sh" = { version = "latest", exe = "checksec" }
 chezmoi = "latest"
 cilium-cli = "latest"
 delta = "latest"
