@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# config.toml hash: {{ include "config.toml" | sha256sum }}
+# config.toml hash: {{ joinPath .chezmoi.sourceFile "../config.toml" | include | sha256sum }}
 mise install
