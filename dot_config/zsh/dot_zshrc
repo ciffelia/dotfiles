@@ -7,6 +7,8 @@ source "$SCRIPTS_DIR/set_options.zsh"
 source "$SCRIPTS_DIR/set_aliases.zsh"
 source "$SCRIPTS_DIR/local.zsh"
 
+source <(mise activate zsh)
+
 # Starship
 zinit ice lucid \
   as'program' from'gh-r' \
