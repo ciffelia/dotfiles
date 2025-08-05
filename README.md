@@ -4,13 +4,12 @@
 
 ### Windows
 
-- scoop
+- chezmoi
 - delta
 
 ### macOS / Linux
 
 - zsh
-- unzip
 - mise
 - Locale `en_US.UTF-8` is available.
   - If not, run `sudo locale-gen en_US.UTF-8`.
@@ -20,8 +19,8 @@
 ### Windows
 
 ```sh
-# Install chezmoi
-scoop install chezmoi
+# Install chezmoi and delta
+scoop install chezmoi delta
 
 # Clone this repository
 chezmoi init https://github.com/ciffelia/dotfiles.git
@@ -36,6 +35,9 @@ chezmoi apply
 ### macOS / Linux
 
 ```sh
+# Install mise
+curl https://mise.run | sh
+
 # Clone this repository
 mise exec chezmoi@latest -- chezmoi init https://github.com/ciffelia/dotfiles.git
 
