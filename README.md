@@ -45,9 +45,6 @@ mise exec chezmoi@latest -- chezmoi diff
 # Apply the changes
 mise exec chezmoi@latest -- chezmoi apply
 
-# Install tools
-mise install
-
 # Restart zsh (or exit bash and start zsh)
 exit
 ```
