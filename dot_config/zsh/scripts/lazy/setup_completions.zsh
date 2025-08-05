@@ -23,6 +23,11 @@ if (( $+commands[kubectl] )); then
   source <(kubectl completion zsh)
 fi
 
+# mise
+if (( $+commands[mise] )); then
+  source <(mise completion zsh)
+fi
+
 # onefetch
 if (( $+commands[onefetch] )); then
   source <(onefetch --generate zsh)
