@@ -14,8 +14,16 @@ function refresh-completions () {
     chezmoi completion zsh > "$completions_dir/_chezmoi"
   fi
 
+  if (( $+commands[cosign] )); then
+    cosign completion zsh > "$completions_dir/_cosign"
+  fi
+
   if (( $+commands[delta] )); then
     delta --generate-completion zsh > "$completions_dir/_delta"
+  fi
+
+  if [[ -d "$(mise where ghq)" ]]; then
+    cp "$(mise where ghq)"/ghq_*/misc/zsh/_ghq "$completions_dir/_ghq"
   fi
 
   if (( $+commands[helm] )); then
@@ -24,6 +32,10 @@ function refresh-completions () {
 
   if (( $+commands[kubectl] )); then
     kubectl completion zsh > "$completions_dir/_kubectl"
+  fi
+
+  if [[ -d "$(mise where lsd)" ]]; then
+    cp "$(mise where lsd)"/lsd-*/autocomplete/_lsd "$completions_dir/_lsd"
   fi
 
   if (( $+commands[mise] )); then
@@ -40,6 +52,18 @@ function refresh-completions () {
 
   if (( $+commands[rclone] )); then
     rclone completion zsh "$completions_dir/_rclone"
+  fi
+
+  if (( $+commands[rg] )); then
+    rg --generate=complete-zsh > "$completions_dir/_rg"
+  fi
+
+  if (( $+commands[starship] )); then
+    starship completions zsh > "$completions_dir/_starship"
+  fi
+
+  if (( $+commands[usage] )); then
+    usage --completions zsh > "$completions_dir/_usage"
   fi
 
   if (( $+commands[uv] )); then
