@@ -9,7 +9,7 @@
 
 ### macOS / Linux
 
-- zsh
+- fish
 - mise
 - Locale `en_US.UTF-8` is available.
   - If not, run `sudo locale-gen en_US.UTF-8`.
@@ -47,6 +47,6 @@ mise exec chezmoi@latest -- chezmoi diff
 # Apply the changes
 mise exec chezmoi@latest -- chezmoi apply
 
-# Restart zsh (or exit bash and start zsh)
+# Restart fish (or exit bash and start fish)
 exit
 ```
