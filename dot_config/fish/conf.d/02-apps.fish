@@ -1,7 +1,9 @@
 #!/usr/bin/env fish
 
 # fzf
-fzf --fish | source
+if status is-interactive
+    fzf --fish | source
+end
 
 # fzf configuration
 # cf. https://tech-broccoli.life/articles/engineer/use-fzf
@@ -11,7 +13,9 @@ set -gx FZF_DEFAULT_OPTS "--height 50% --layout=reverse --border \
 --bind 'shift-up:preview-half-page-up,shift-down:preview-half-page-down'"
 
 # mcfly
-mcfly init fish | source
+if status is-interactive
+    mcfly init fish | source
+end
 
 # Neovim
 # packer.nvim が存在しない場合はダウンロードする

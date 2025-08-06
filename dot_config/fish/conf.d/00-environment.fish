@@ -33,4 +33,6 @@ if test -d $HOME/.deno
     fish_add_path --path $DENO_INSTALL/bin
 end
 
-starship init fish | source
+if status is-interactive
+    starship init fish | source
+end
