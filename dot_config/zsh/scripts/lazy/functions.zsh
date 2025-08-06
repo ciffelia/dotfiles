@@ -8,3 +8,11 @@ function change-git-directory-with-incremental-search () {
 }
 
 alias g='change-git-directory-with-incremental-search'
+
+function aws-ssm-start-session-with-incremental-search () {
+  local instance_id=$(aws ec2 describe-instances --query 'Reservations[].Instances[].[InstanceId, State.Name, InstanceType, PrivateIpAddress, Platform || `Linux`, Tags[?Key == `Name`].Value | [0]]' --output text | column -t | fzf --reverse | cut -d ' ' -f 1)
+  [ -z "$instance_id" ] && return
+  aws ssm start-session --target "$instance_id"
+}
+
+alias aws-ss='aws-ssm-start-session-with-incremental-search'
