@@ -2,7 +2,7 @@
 # cf. https://tech-broccoli.life/articles/engineer/use-fzf
 function change-git-directory-with-incremental-search () {
   local ghq_root=$(ghq root)
-  local repo=$(ghq list | fzf --preview "onefetch --no-art '$ghq_root/{}'" --height 70%)
+  local repo=$(ghq list | fzf --preview "onefetch --no-art -- '$ghq_root/{}'" --height 70%)
   [ -z "$repo" ] && return
   cd "$ghq_root/$repo"
 }
