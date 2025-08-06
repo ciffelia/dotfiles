@@ -1,4 +1,2 @@
 diff:
   pager: delta
-  command: delta
-  exclude: [dirs]
