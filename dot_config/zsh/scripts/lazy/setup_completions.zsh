@@ -1,6 +1,6 @@
 completions_dir=${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/zsh-completions
 
-fpath=($fpath $completions_dir)
+fpath=($completions_dir $fpath)
 
 function refresh-completions () {
   rm -rf "$completions_dir"
