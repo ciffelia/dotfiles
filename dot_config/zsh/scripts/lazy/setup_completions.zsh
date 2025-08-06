@@ -58,6 +58,11 @@ function refresh-completions () {
     rg --generate=complete-zsh > "$completions_dir/_rg"
   fi
 
+  if (( $+commands[rustup] )); then
+    rustup completions zsh > "$completions_dir/_rustup"
+    rustup completions zsh cargo > "$completions_dir/_cargo"
+  fi
+
   if (( $+commands[starship] )); then
     starship completions zsh > "$completions_dir/_starship"
   fi
