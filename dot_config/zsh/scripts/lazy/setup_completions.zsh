@@ -1,4 +1,4 @@
-completions_dir=${XDG_DATA_HOME:-$HOME/.local/share}/my-zsh-completions
+completions_dir=${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/zsh-completions
 
 fpath=($fpath $completions_dir)
 
