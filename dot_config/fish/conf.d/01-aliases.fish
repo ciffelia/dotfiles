@@ -6,5 +6,5 @@ alias ls 'lsd'
 alias la 'lsd -a'
 alias ll 'lsd -la'
 
-alias g 'change_git_directory_with_incremental_search'
+alias g 'cd_to_ghq_repository'
 alias aws-ss 'aws_ssm_start_session_with_incremental_search'
