@@ -2,7 +2,7 @@
 
 set completions_dir $XDG_DATA_HOME/dotfiles/fish-completions
 
-if not test -d $completions_dir
+if not test -d "$completions_dir"
     refresh_completions
 end
 

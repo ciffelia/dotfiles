@@ -28,7 +28,7 @@ else
 end
 
 # Deno
-if test -d $HOME/.deno
+if test -d "$HOME/.deno"
     set -gx DENO_INSTALL $HOME/.deno
     fish_add_path --path $DENO_INSTALL/bin
 end

@@ -30,7 +30,7 @@ function refresh_completions -d "Regenerate completions for various tools"
         kubectl completion fish > $completions_dir/kubectl.fish
     end
 
-    if test -d (mise where lsd 2>/dev/null)
+    if test -d "$(mise where lsd 2>/dev/null)"
         cp (mise where lsd)/lsd-*/autocomplete/lsd.fish $completions_dir/lsd.fish
     end
 
