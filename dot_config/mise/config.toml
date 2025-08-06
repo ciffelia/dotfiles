@@ -11,6 +11,8 @@ kubeseal = "0.27.1"
 lsd = "latest"
 "ubi:cantino/mcfly" = "latest"
 neovim = "latest"
+node = "22"
+"npm:pnpm" = "latest-10"
 # onefetch>=2.24.0 requires glibc>=2.38
 "ubi:o2sh/onefetch" = "2.23.1"
 rclone = "latest"
