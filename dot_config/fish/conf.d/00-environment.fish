@@ -15,11 +15,6 @@ fish_add_path --path $HOME/.local/bin
 fish_add_path --path /usr/local/go/bin
 fish_add_path --path $HOME/.cargo/bin
 
-# Snap (workaround for https://qiita.com/sameyasu/items/072882ee92bca54906d8)
-if test -f /etc/profile.d/apps-bin-path.sh
-    bass source /etc/profile.d/apps-bin-path.sh
-end
-
 # mise
 if status is-interactive
     mise activate fish | source
