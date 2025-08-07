@@ -38,8 +38,8 @@ if status is-interactive
 end
 
 # Neovim
-# packer.nvim が存在しない場合はダウンロードする
-# 一度ダウンロードしたあとは packer.nvim 自身が管理してくれる
+# Download packer.nvim if it does not exist.
+# Once downloaded, packer.nvim will manage itself.
 if not test -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
     git clone --filter=blob:none https://github.com/wbthomason/packer.nvim.git \
         $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
