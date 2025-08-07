@@ -12,6 +12,26 @@ set -gx FZF_DEFAULT_OPTS "--height 50% --layout=reverse --border \
 --bind 'ctrl-/:change-preview-window(80%|hidden|)' \
 --bind 'shift-up:preview-half-page-up,shift-down:preview-half-page-down'"
 
+# grc
+if status is-interactive; and test -f /etc/grc.fish
+    # Redefine PATH as a local variable to avoid modifying the global PATH.
+    set -l PATH $PATH
+
+    # Remove Windows directories (/mnt/c/*) from PATH if running on WSL.
+    # This reduces the execution time of `type -q nonexistent_command` in grc.fish
+    # from approximately 50ms to less than 1ms per invocation, significantly improving
+    # shell startup performance.
+    if string match -q -- "*microsoft*" (cat /proc/sys/kernel/osrelease)
+        for i in (seq (count $PATH) | tac)
+            if string match --quiet "/mnt/c/*" -- $PATH[$i]
+                set --erase PATH[$i]
+            end
+        end
+    end
+
+    source /etc/grc.fish
+end
+
 # mcfly
 if status is-interactive
     mcfly init fish | source
