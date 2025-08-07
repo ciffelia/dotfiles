@@ -44,3 +44,8 @@ if not test -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
     git clone --filter=blob:none https://github.com/wbthomason/packer.nvim.git \
         $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
 end
+
+# Starship
+if status is-interactive
+    starship init fish | source
+end
