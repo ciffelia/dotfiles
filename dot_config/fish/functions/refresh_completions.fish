@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 function refresh_completions -d "Regenerate completions for various tools"
-    set completions_dir $XDG_DATA_HOME/dotfiles/fish-completions
+    set -l completions_dir $XDG_DATA_HOME/dotfiles/fish-completions
 
     rm -rf $completions_dir
     mkdir -p $completions_dir
