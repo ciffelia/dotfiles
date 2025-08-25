@@ -21,3 +21,12 @@ starship = "latest"
 tfenv = "latest"
 usage = "latest"
 yq = "latest"
+
+[settings]
+# Idiomatic version files like [...]/.node-version are currently enabled by default. However, this will change in mise 2025.10.0 to instead default to disabled.
+# You can remove this warning by explicitly enabling idiomatic version files for node with:
+#     mise settings add idiomatic_version_file_enable_tools node
+# You can disable idiomatic version files with:
+#     mise settings add idiomatic_version_file_enable_tools "[]"
+# See https://github.com/jdx/mise/discussions/4345 for more information.
+idiomatic_version_file_enable_tools = []
