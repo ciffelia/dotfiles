@@ -3,16 +3,39 @@
 [core]
   autocrlf = input
   symlinks = true
+  fsmonitor = true
+  untrackedCache = true
+[column]
+  ui = auto
+[branch]
+  sort = -committerdate
+[tag]
+  sort = version:refname
 [init]
   defaultBranch = main
+[diff]
+  algorithm = histogram
+  colorMoved = dimmed-zebra
+  mnemonicPrefix = true
+  renames = true
 [commit]
   verbose = true
+[merge]
+  conflictstyle = zdiff3
+[rebase]
+  autostash = true
+  autosquash = true
+  updateRefs = true
 [fetch]
+  all = true
   prune = true
+  pruneTags = true
 [pull]
+  autostash = true
   ff = only
 [push]
   autoSetupRemote = true
+  followTags = true
 
 [credential]
 {{- if eq .chezmoi.os "windows" }}
