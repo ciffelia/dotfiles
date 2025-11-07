@@ -16,4 +16,7 @@ return require('packer').startup(function(use)
 
   -- 右端にスクロールバーを表示する
   use 'petertriho/nvim-scrollbar'
+
+  -- GitHub Copilot
+  use 'github/copilot.vim'
 end)
