@@ -1,6 +1,7 @@
 [tools]
 aws-cli = "latest"
 bat = "latest"
+bun = "latest"
 cosign = "latest"
 chezmoi = "latest"
 cilium-cli = "latest"
