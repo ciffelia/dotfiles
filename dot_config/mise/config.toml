@@ -14,7 +14,6 @@ lsd = "latest"
 "github:cantino/mcfly" = "latest"
 neovim = "latest"
 node = "24"
-"npm:pnpm" = "latest-10"
 # onefetch>=2.24.0 requires glibc>=2.38
 "github:o2sh/onefetch" = "2.23.1"
 rclone = "latest"
