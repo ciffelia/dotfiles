@@ -48,6 +48,11 @@
   helper = store
 {{- end }}
 
+[credential "https://github.com"]
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !gh auth git-credential
+
 # VSCodeのDev Container使用時はGitのinclude.pathが効かないため、
 # Dev Containerの中でも適用したい設定はChezmoiでincludeする
 {{ include (joinPath .chezmoi.sourceFile "../include/alias.conf") }}
